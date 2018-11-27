@@ -36,59 +36,59 @@ $id = $row['id_usuario'];
            $db = mysqli_connect('localhost', 'root', '254088Ma!', 'mandra');
       mysqli_set_charset($db, 'utf8')
           ?>
-                   
+
     <?php
         $qnombre="select * from usuario where user_register_id_usuario = $id;";
         $rnombre =mysqli_query($db, $qnombre);
         $rownombre=mysqli_fetch_array($rnombre);
         $vnombre = $rownombre['nombre'];
     ?>
-                   
+
        <div class="labelac">Nombre</div>
  <div class="input-group input-group-lg">
  <span class="input-group-addon" id="sizing-addon1"></span>
-  <input type="text" class="form-control" name="nombre" ria-describedby="sizing-addon1" value="<?php  echo $vnombre  ?>" >
+  <input type="text" class="form-control" name="nombre" ria-describedby="sizing-addon1" value="<?php  echo $vnombre  ?>" required>
       </div>
-                   
+
     <?php
         $qapellidop="select * from usuario where user_register_id_usuario = $id;";
         $rapellidop =mysqli_query($db, $qapellidop);
         $rowapellidop=mysqli_fetch_array($rapellidop);
         $vapellidop = $rowapellidop['apellido_paterno'];
     ?>
-                   
+
       <div class="labelac">Apellido Paterno</div>
 <div class="input-group input-group-lg">
 <span class="input-group-addon" id="sizing-addon1"></span>
- <input type="text" class="form-control" name="apellido_pat" ria-describedby="sizing-addon1" value="<?php  echo $vapellidop  ?>">
+ <input type="text" class="form-control" name="apellido_pat" ria-describedby="sizing-addon1" value="<?php  echo $vapellidop  ?>" required>
      </div>
-                   
+
     <?php
         $qapellidom="select * from usuario where user_register_id_usuario = $id;";
         $rapellidom =mysqli_query($db, $qapellidom);
         $rowapellidom=mysqli_fetch_array($rapellidom);
         $vapellidom = $rowapellidom['apellido_materno'];
     ?>
-                   
+
    <div class="labelac">Apellido Materno</div>
  <div class="input-group input-group-lg">
  <span class="input-group-addon" id="sizing-addon1"></span>
-  <input type="text" class="form-control" name="apellido_mat" ria-describedby="sizing-addon1" value="<?php  echo $vapellidom  ?>">
+  <input type="text" class="form-control" name="apellido_mat" ria-describedby="sizing-addon1" value="<?php  echo $vapellidom  ?>" required>
       </div>
-                   
+
     <?php
         $qedad="select * from usuario where user_register_id_usuario = $id;";
         $redad =mysqli_query($db, $qedad);
         $rowedad=mysqli_fetch_array($redad);
         $vedad = $rowedad['edad'];
     ?>
-                   
+
       <div class="labelac">Edad</div>
       <div class="input-group input-group-lg">
       <span class="input-group-addon" id="sizing-addon1"></span>
-      <input type="number" class="form-control" name="edad" ria-describedby="sizing-addon1" value="<?php  echo $vedad  ?>">
+      <input type="number" class="form-control" name="edad" ria-describedby="sizing-addon1" value="<?php  echo $vedad  ?>" required>
          </div>
-                   
+
         <?php
         $qtelefono="select * from usuario where user_register_id_usuario = $id;";
         $rtelefono =mysqli_query($db, $qtelefono);
@@ -101,7 +101,7 @@ $id = $row['id_usuario'];
          <span class="input-group-addon" id="sizing-addon1"></span>
          <input type="text" class="form-control" name="telefono" ria-describedby="sizing-addon1" value="<?php  echo $vtelefono  ?>">
             </div>
-                   
+
             <?php
         $qcelular="select * from usuario where user_register_id_usuario = $id;";
         $rcelular =mysqli_query($db, $qcelular);
@@ -112,9 +112,9 @@ $id = $row['id_usuario'];
             <div class="labelac">Celular</div>
             <div class="input-group input-group-lg">
             <span class="input-group-addon" id="sizing-addon1"></span>
-            <input type="text" class="form-control" name="celular" ria-describedby="sizing-addon1" value="<?php  echo $vcelular  ?>">
+            <input type="text" class="form-control" name="celular" ria-describedby="sizing-addon1" value="<?php  echo $vcelular  ?>" required>
                </div>
-                   
+
                    <?php
         $qlinkedin="select * from usuario where user_register_id_usuario = $id;";
         $rlinkedin =mysqli_query($db, $qlinkedin);
@@ -127,8 +127,8 @@ $id = $row['id_usuario'];
                <span class="input-group-addon" id="sizing-addon1"></span>
                <input type="text" class="form-control" name="linkedin" ria-describedby="sizing-addon1" value="<?php  echo $vlinkedin  ?>">
                   </div>
-                   
-                   
+
+
                    <?php
         $qsueldoa="select * from usuario where user_register_id_usuario = $id;";
         $rsueldoa =mysqli_query($db, $qsueldoa);
@@ -139,9 +139,9 @@ $id = $row['id_usuario'];
                   <div class="labelac">Sueldo Actual</div>
                   <div class="input-group input-group-lg">
                   <span class="input-group-addon" id="sizing-addon1"></span>
-                  <input type="number" class="form-control" name="sueldo_ac" ria-describedby="sizing-addon1" value="<?php  echo $vsueldoa  ?>">
+                  <input type="number" class="form-control" name="sueldo_ac" ria-describedby="sizing-addon1" value="<?php  echo $vsueldoa  ?>" required>
                      </div>
-                   
+
                    <?php
         $qsueldod="select * from usuario where user_register_id_usuario = $id;";
         $rsueldod =mysqli_query($db, $qsueldod);
@@ -152,9 +152,9 @@ $id = $row['id_usuario'];
                      <div class="labelac">Sueldo deseado</div>
                      <div class="input-group input-group-lg">
                      <span class="input-group-addon" id="sizing-addon1"></span>
-                     <input type="number" class="form-control" name="sueldo_des" ria-describedby="sizing-addon1" value="<?php  echo $vsueldod  ?>">
+                     <input type="number" class="form-control" name="sueldo_des" ria-describedby="sizing-addon1" value="<?php  echo $vsueldod  ?>" required>
                         </div>
-                   
+
                     <?php
         $qdeschab="select * from usuario where user_register_id_usuario = $id;";
         $rdeschab =mysqli_query($db, $qdeschab);
@@ -167,8 +167,8 @@ $id = $row['id_usuario'];
                         <span class="input-group-addon" id="sizing-addon1"></span>
                         <input style="height:100px !important;" type="textarea" class="form-control" name="descripcionhab" ria-describedby="sizing-addon1" value="<?php  echo $vdeschab ?>">
                            </div>
-                   
-                   
+
+
                    <?php
         $qdescper="select * from usuario where user_register_id_usuario = $id;";
         $rdescper =mysqli_query($db, $qdescper);
@@ -181,7 +181,7 @@ $id = $row['id_usuario'];
                            <span class="input-group-addon" id="sizing-addon1"></span>
                            <input style="height:100px !important;" type="textarea" class="form-control" name="descripcionper" ria-describedby="sizing-addon1" value="<?php  echo $vdescper ?>">
                               </div>
-                   
+
                     <?php
         $qeducacion="select * from usuario where user_register_id_usuario = $id;";
         $reducacion =mysqli_query($db, $qeducacion);
@@ -191,13 +191,13 @@ $id = $row['id_usuario'];
         $reducacion2 =mysqli_query($db, $qeducacion2);
         $roweducacion2=mysqli_fetch_array($reducacion2);
         $veducacion2 = $roweducacion2['nombre'];
-                                  
-                                   
+
+
     ?>
-                    
+
                     <div class="labelac">Educación</div>
-                       <select name="educacion" class="form-control dropd" value="<?php  echo $veducacion ?>">
-                           
+                       <select required name="educacion" class="form-control dropd" value="<?php  echo $veducacion ?>">
+
                          <option value="<?php  echo $veducacion ?>">
                              <?php  echo $veducacion2 ?>
                              </option>
@@ -207,16 +207,16 @@ $id = $row['id_usuario'];
                              $result= mysqli_query($db, $query);
                              if($result)
                              {
-                                  
+
                                  while($row=mysqli_fetch_array($result)){
-                                    
-                                                                         
+
+
                                      echo'<option value="'.$row['ideducacion'].'">'.$row['nombre'].'</option>';
                                  }
                              }
                              ?>
                           </select>
-                   
+
                    <?php
         $qhorario="select * from usuario where user_register_id_usuario = $id;";
         $rhorario =mysqli_query($db, $qhorario);
@@ -226,18 +226,18 @@ $id = $row['id_usuario'];
         $rhorario2 =mysqli_query($db, $qhorario2);
         $rowhorario2=mysqli_fetch_array($rhorario2);
         $vhorario2 = $rowhorario2['tipo'];
-                                  
-                                   
+
+
     ?>
-                   
+
                     <div class="labelac">Horario</div>
-                       <select name="horario" class="form-control dropd">
+                       <select required name="horario" class="form-control dropd" value="<?php  echo $vhorario; ?>">
                          <!--<option>
                              Selecciona el correspondiente
                              </option>-->
-                           
-                           <option value="<?php  echo $vhorario ?>">
-                             <?php  echo $vhorario2 ?>
+
+                           <option value="<?php  echo $vhorario; ?>">
+                             <?php  echo $vhorario2; ?>
                              </option>
                              <?php
                            $query="select * from horario";
@@ -261,13 +261,13 @@ $id = $row['id_usuario'];
         $rsexo2 =mysqli_query($db, $qsexo2);
         $rowsexo2=mysqli_fetch_array($rsexo2);
         $vsexo2 = $rowsexo2['nombre'];
-                                  
-                                   
+
+
     ?>
 
 
                               <div class="labelac">Sexo</div>
-                       <select name="sexo" class="form-control dropd">
+                       <select required name="sexo" class="form-control dropd">
                          <option value="<?php  echo $vsexo ?>">
                              <?php  echo $vsexo2 ?>
                              </option>
@@ -283,7 +283,7 @@ $id = $row['id_usuario'];
                              ?>
                           </select>
 
-                   
+
                     <?php
         $qcategoria="select * from usuario where user_register_id_usuario = $id;";
         $rcategoria =mysqli_query($db, $qcategoria);
@@ -293,13 +293,13 @@ $id = $row['id_usuario'];
         $rcategoria2 =mysqli_query($db, $qcategoria2);
         $rowcategoria2=mysqli_fetch_array($rcategoria2);
         $vcategoria2 = $rowcategoria2['nombre'];
-                                  
-                                   
+
+
     ?>
 
 
                           <div class="labelac">Categoría</div>
-                   <select name="categoria" class="form-control dropd">
+                   <select required name="categoria" class="form-control dropd">
                      <option value="<?php  echo $vcategoria ?>">
                              <?php  echo $vcategoria2 ?>
                              </option>
@@ -324,12 +324,12 @@ $id = $row['id_usuario'];
         $rsubcategoria2 =mysqli_query($db, $qsubcategoria2);
         $rowsubcategoria2=mysqli_fetch_array($rsubcategoria2);
         $vsubcategoria2 = $rowsubcategoria2['nombre'];
-                                  
-                                   
+
+
     ?>
 
                       <div class="labelac">Subcategoría</div>
-               <select name="subcategoria" class="form-control dropd">
+               <select required name="subcategoria" class="form-control dropd">
                  <option value="<?php  echo $vsubcategoria ?>">
                              <?php  echo $vsubcategoria2 ?>
                              </option>
@@ -345,7 +345,7 @@ $id = $row['id_usuario'];
                      ?>
                   </select>
 
-                   
+
                    <?php
         $qlocalidad="select * from usuario where user_register_id_usuario = $id;";
         $rlocalidad =mysqli_query($db,$qlocalidad);
@@ -355,13 +355,13 @@ $id = $row['id_usuario'];
         $rlocalidad2 =mysqli_query($db, $qlocalidad2);
         $rowlocalidad2=mysqli_fetch_array($rlocalidad2);
         $vlocalidad2 = $rowlocalidad2['nombre'];
-                                  
-                                   
+
+
     ?>
-                   
+
 
                   <div class="labelac">Localidad</div>
-      <select name="localidad" class="form-control dropd">
+      <select required name="localidad" class="form-control dropd">
         <option value="<?php  echo $vlocalidad ?>">
                              <?php  echo $vlocalidad2 ?>
                              </option>
@@ -376,9 +376,9 @@ $id = $row['id_usuario'];
             }
             ?>
          </select>
-                   
-                   
-                   
+
+
+
                     <?php
         $qingles="select * from usuario where user_register_id_usuario = $id;";
         $ringles =mysqli_query($db,$qingles);
@@ -388,12 +388,12 @@ $id = $row['id_usuario'];
         $ringles2 =mysqli_query($db, $qingles2);
         $rowingles2=mysqli_fetch_array($ringles2);
         $vingles2 = $rowingles2['nivel'];
-                                  
-                                   
+
+
     ?>
 
          <div class="labelac">Nivel de inglés</div>
- <select name="ingles" class="form-control dropd">
+ <select required name="ingles" class="form-control dropd">
     <option value="<?php  echo $vingles ?>">
                              <?php  echo $vingles2 ?>
                              </option>
@@ -408,11 +408,59 @@ $id = $row['id_usuario'];
         }
         ?>
      </select>
+
+
+     <?php
+     $correo=$_SESSION['correo'];
+     $q="select * from user_register where correo = '$correo';";
+     $result =mysqli_query($db, $q);
+     $row=mysqli_fetch_array($result);
+     $id = $row['id_usuario'];
+
+     $qcompetencia1="select * from usuario_has_tecnica where user_register_id_usuario = $id;";
+     $rcompetencia1 =mysqli_query($db,$qcompetencia1);
+     //$rowcompetencia1=mysqli_fetch_array($rcompetencia1);
+     //$vcompetencia1 = $rowcompetencia1['tecnica_idtecnica'];
+
+
+                        $i=0;
+                        $arreglo = array();
+                        $otroarreglo = array();
+                                      $arreglo2 = array();
+
+
+                         while($res=mysqli_fetch_array($rcompetencia1)){
+                             $i++;
+                             $arreglo2[$i] = $res['tecnica_idtecnica'];
+
+                                $cons=mysqli_query($db,"select * from tecnica t, competencia c where t.competencia_idcompetencia=c.idcompetencia and idtecnica = $arreglo2[$i];");
+                       // $resultado = mysqli_fetch_array($cons);
+
+
+
+
+                                      while($resultado=mysqli_fetch_array($cons)){
+
+                                          $arreglo[$i] = $resultado['nombre'];
+                                          $otroarreglo[$i] = $resultado['competencia_idcompetencia'];
+
+
+                                      }
+                         }
+
+                               ?>
+
+
+
+
+
+
+
   <div class="labelac">Competencia 1</div>
   <select required name="competencia1" class="form-control dropd">
-    <option value="">
-        Selecciona el correspondiente
-        </option>           
+    <option value=" <?php  echo $otroarreglo[1]; ?>">
+       <?php  echo $arreglo[1]; ?>
+        </option>
         <?php
         $query="select * from competencia";
         $result= mysqli_query($db, $query);
@@ -426,9 +474,9 @@ $id = $row['id_usuario'];
      </select>
                    <div class="labelac">Competencia 2</div>
   <select required name="competencia2"  class="form-control dropd">
-    <option value="">
-        Selecciona el correspondiente
-        </option>           
+    <option value=" <?php  echo $otroarreglo[2]; ?>">
+       <?php  echo $arreglo[2]; ?>
+        </option>
         <?php
         $query="select * from competencia";
         $result= mysqli_query($db, $query);
@@ -442,9 +490,9 @@ $id = $row['id_usuario'];
      </select>
                    <div class="labelac">Competencia 3</div>
   <select required name="competencia3" class="form-control dropd">
-    <option>
-        Selecciona el correspondiente
-        </option>           
+    <option value=" <?php  echo $otroarreglo[3]; ?>">
+         <?php  echo $arreglo[3]; ?>
+        </option>
         <?php
         $query="select * from competencia";
         $result= mysqli_query($db, $query);
@@ -663,5 +711,3 @@ $id = $row['id_usuario'];
     </div>
 <a role="button" class="btn btn-success btn-lg btn-block" href="#!Registro">Registrar Alumno</a>-->
     <?php //endif ?>
-
-   

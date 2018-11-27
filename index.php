@@ -46,6 +46,7 @@
             <li><a href="#!">Inicio</a></li>
 	    <li><a href="#!Actualizate">Actualiza tus datos</a></li>
             <li><a href="#!Activa">Activa o desactivate</a></li>
+                    <li><a href="#!Cambia">Cambia tú contraseña</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="index.php?logout='1'">Salir de la sesión<span class="sr-only">(current)</span></a></li>

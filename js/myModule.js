@@ -18,8 +18,24 @@ app.config(function($routeProvider){
 				templateUrl:"partials/usuariocompetencia.php",
 				controller:"mainCtrl"
 		})
-    .when("/Usuario-habilidad", {
+        .when("/Usuario-activar", {
+				templateUrl:"partials/usuarioactivar.php",
+				controller:"mainCtrl"
+		})
+        .when("/Usuario-desactivar", {
+				templateUrl:"partials/usuariodesactivar.php",
+				controller:"mainCtrl"
+		})
+    .when("/Usuario-error-activar", {
+				templateUrl:"partials/usuarioerrorac.php",
+				controller:"mainCtrl"
+		})
+     .when("/Usuario-habilidad", {
 				templateUrl:"partials/usuariohabilidad.php",
+				controller:"mainCtrl"
+		})
+    .when("/Cambia", {
+				templateUrl:"partials/usuarioerrorac.php",
 				controller:"mainCtrl"
 		})
 		.otherwise({
