@@ -1,24 +1,12 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-
     <title>PHP - How to make dependent dropdown list using jquery Ajax?</title>
-
-   
-
     <link rel="stylesheet" href="http://demo.itsolutionstuff.com/plugin/bootstrap-3.min.css">
-
 </head>
-
 <body>
-
-
 <div class="container">
-
     <div class="panel panel-default">
-
       <div class="panel-heading">Select State and get bellow Related City</div>
 
       <div class="panel-body">

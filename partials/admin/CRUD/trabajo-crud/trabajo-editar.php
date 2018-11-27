@@ -41,6 +41,18 @@
         $result= mysqli_query($db, $query);
     $row= mysqli_fetch_array($result);
     $habilidad3= $row{'habilidad_idhabilidad'};
+    $query="select * from trabajo_has_tecnica where trabajo_id_trabajo='$numero' and importancia=1";
+        $result= mysqli_query($db, $query);
+    $row= mysqli_fetch_array($result);
+    $competencia1= $row{'tecnica_idtecnica'};
+    $query="select * from trabajo_has_tecnica where trabajo_id_trabajo='$numero' and importancia=2";
+        $result= mysqli_query($db, $query);
+    $row= mysqli_fetch_array($result);
+    $competencia2= $row{'tecnica_idtecnica'};
+    $query="select * from trabajo_has_tecnica where trabajo_id_trabajo='$numero' and importancia=3";
+        $result= mysqli_query($db, $query);
+    $row= mysqli_fetch_array($result);
+    $competencia3= $row{'tecnica_idtecnica'};
           ?>
            <label>Id</label>
  <div class="input-group input-group-lg">
@@ -367,6 +379,75 @@ echo $edad;
         {
             while($row=mysqli_fetch_array($result)){
                 echo'<option value="'.$row['idhabilidad'].'">'.$row['nombre'].'</option>';
+            }
+        }
+        ?>
+     </select>
+      <label>Competencia con importancia 1</label>
+  <select name="tecnica1t" class="form-control dropd">
+    <?php
+        $query="select idtecnica, nombre from tecnica where idtecnica='$competencia1'";
+        $result= mysqli_query($db, $query);
+        if($result)
+        {
+            while($row=mysqli_fetch_array($result)){
+                echo'<option value="'.$row['idtecnica'].'">'.$row['nombre'].'</option>';
+            }
+        }
+        ?>      
+        <?php
+        $query="select * from tecnica where idtecnica!='$competencia1'";
+        $result= mysqli_query($db, $query);
+        if($result)
+        {
+            while($row=mysqli_fetch_array($result)){
+                echo'<option value="'.$row['idtecnica'].'">'.$row['nombre'].'</option>';
+            }
+        }
+        ?>
+     </select>
+    <label>Competencia con importancia 2</label>
+  <select name="tecnica2t" class="form-control dropd">
+    <?php
+        $query="select idtecnica, nombre from tecnica where idtecnica='$competencia2'";
+        $result= mysqli_query($db, $query);
+        if($result)
+        {
+            while($row=mysqli_fetch_array($result)){
+                echo'<option value="'.$row['idtecnica'].'">'.$row['nombre'].'</option>';
+            }
+        }
+        ?>      
+        <?php
+        $query="select * from tecnica where idtecnica!='$competencia2'";
+        $result= mysqli_query($db, $query);
+        if($result)
+        {
+            while($row=mysqli_fetch_array($result)){
+                echo'<option value="'.$row['idtecnica'].'">'.$row['nombre'].'</option>';
+            }
+        }
+        ?>
+     </select>
+     <label>Competencia con importancia 3</label>
+  <select name="tecnica3t" class="form-control dropd">
+    <?php
+        $query="select idtecnica, nombre from tecnica where idtecnica='$competencia3'";
+        $result= mysqli_query($db, $query);
+        if($result)
+        {
+            while($row=mysqli_fetch_array($result)){
+                echo'<option value="'.$row['idtecnica'].'">'.$row['nombre'].'</option>';
+            }
+        }
+        ?>      
+        <?php
+        $query="select * from tecnica where idtecnica!='$competencia3'";
+        $result= mysqli_query($db, $query);
+        if($result)
+        {
+            while($row=mysqli_fetch_array($result)){
+                echo'<option value="'.$row['idtecnica'].'">'.$row['nombre'].'</option>';
             }
         }
         ?>

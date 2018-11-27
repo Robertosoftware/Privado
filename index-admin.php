@@ -63,7 +63,22 @@
         <li><a href="#!Sexo">Sexo</a></li>
         <li><a href="#!Empresa">Empresa</a></li>
       </ul></li>
+             <li class="dropdown"><!--<a href="#!">Consultar información</a>-->
+             <a class="dropdown-toggle" data-toggle="dropdown">Consulta Oferta <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+          <li class="dropdown-header">Relación primaria</li>
+        <li><a href="#!">Habilidad, Competencia y Nivel de inglés</a></li>
+        <li class="dropdown-header">Relaciones secundarias</li>
+        <li><a href="#!">Habilidad y Competencia</a></li>
+        <li><a href="#!">Habilidad y Nivel de inglés</a></li>
+        <li><a href="#!">Competencia y Nivel de inglés</a></li>
+           <li class="dropdown-header">Relaciones terciarias</li>
+        <li><a href="#!">Habilidad</a></li>
+        <li><a href="#!">Competencia</a></li>
+        <li><a href="#!">Nivel de inglés</a></li>
+      </ul></li>
           </ul>
+            
           <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="index-admin.php?logout='1'">Salir de la sesión<span class="sr-only">(current)</span></a></li>
           </ul>
